@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual-Pet</title>
+    <link rel="stylesheet" href="virtual-pet.css">
+</head>
+<body>
+    <h1>Welcome to your Virtual Pet!</h1>
+    <div id="pet-container">
+        <h2 id="pet-name">Your Pet Name</h2>
+        <img id="pet-image" src="" alt="Your Pet's Image">
+        <p id="pet-description">Your Pet's Description</p>
+    </div>
+
+    <label for="pet-name">Pet Name:</label>
+    <p id="status">Hunger: 5, Happiness: 5, Energy: 5</p>
+    <button onclick="pet.eat()">Eat</button>
+    <button onclick="pet.play()">Play</button>
+    <button onclick="pet.sleep()">Sleep</button>
+
+
+    
+    <script src="virtual-pet.js"></script>
+</body>
+</html>
