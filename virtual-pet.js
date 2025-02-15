@@ -1,12 +1,16 @@
-function getRandomStat() {
-    return Math.floor(Math.random() * 11); // Random number between 0 and 10
+function getUniqueStats() {
+    let numbers = [...Array(11).keys()]; // Array of numbers 0-10
+    numbers.sort(() => Math.random() - 0.5); // Shuffle array
+    return numbers.slice(0, 3); // Get first three unique numbers
 }
+
+let [hungerStart, happinessStart, energyStart] = getUniqueStats();
 
 let pet = {
     name: "Fluffy",
-    hunger: getRandomStat(), // 10 is best (full), 0 is worst (starving)
-    happiness: getRandomStat(), // 10 is best (happy), 0 is worst (sad)
-    energy: getRandomStat(), // 10 is best (rested), 0 is worst (exhausted)
+    hunger: hungerStart, // 10 is best (full), 0 is worst (starving)
+    happiness: happinessStart, // 10 is best (happy), 0 is worst (sad)
+    energy: energyStart, // 10 is best (rested), 0 is worst (exhausted)
 
     eat: function() {
         if (this.hunger < 10) {
