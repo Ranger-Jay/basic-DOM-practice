@@ -1,7 +1,9 @@
 function getUniqueStats() {
-    let numbers = [...Array(11).keys()]; // Array of numbers 0-10
-    numbers.sort(() => Math.random() - 0.5); // Shuffle array
-    return numbers.slice(0, 3); // Get first three unique numbers
+    let numbers = [...Array(11).keys()]; // Array of numbers 0-10, which are actuallly empty at this point. (same as loop and numbers.push)
+    console.log(numbers);
+    numbers.sort(() => Math.random() - 0.5); // Shuffles in the numbers into the array.
+    console.log(numbers);
+    return numbers.slice(0, 3); // Gets the first three unique numbers from the array, and returns, so it's random.
 }
 
 let [hungerStart, happinessStart, energyStart] = getUniqueStats();

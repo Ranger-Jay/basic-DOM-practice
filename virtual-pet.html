@@ -3,25 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual-Pet</title>
+    <title>Virtual Pet</title>
     <link rel="stylesheet" href="virtual-pet.css">
 </head>
 <body>
-    <h1>Welcome to your Virtual Pet!</h1>
-    <div id="pet-container">
-        <h2 id="pet-name">Your Pet Name</h2>
-        <img id="pet-image" src="" alt="Your Pet's Image">
-        <p id="pet-description">Your Pet's Description</p>
+    <h1>Welcome To Your Virtual Pet! </h1>
+    <p>Create a pet to care for and learn about its needs. Good luck!</p>
+    
+    <p>Choose a pet type:</p>
+    <button onclick="setPetType('dog')">Dog</button>
+    <button onclick="setPetType('cat')">Cat</button>
+    <button onclick="setPetType('bird')">Bird</button>
+    
+    <div id="petDisplay" style="display: none;">
+        <h2 id="petTypeDisplay"></h2>
+        <button onclick="pet.feed()">Feed</button>
+        <button onclick="pet.train()">Train</button>
+        <button onclick="pet.rest()">Rest</button>
+    </div>
+    
+    <h2>Pet Name:</h2>
+    <input type="text" id="petNameInput" disabled>
+    <button onclick="setName()">Change Name</button>
+    
+    <h2>Pet Hunger Level:</h2>
+    <p id="hungerLevelDisplay"></p>
+    
+    <h2>Pet Playfulness Level:</h2>
+    <p id="playfulnessLevelDisplay"></p>
+    
+    <h2>Pet Health Level:</h2>
+    <p id="healthLevelDisplay"></p>
+    
+    <h2>Pet Status:</h2>
+    <p id="statusDisplay"></p>
+    
+    <h2>Pet Needs:</h2>
+    <p id="needsDisplay"></p>
+    
+    <h2>Pet Actions:</h2>
+    <p id="actionsDisplay"></p>
+    
+    <h2>Pet Tricks:</h2>
+    <p id="tricksDisplay"></p>
+
+    <p id="test">Test123</p>
+
+    <div id="nameInput">
+        <input type="text" id="petName" placeholder="Enter your pet's name">
+        <button onclick="setPetName()">Submit</button>
     </div>
 
-    <label for="pet-name">Pet Name:</label>
-    <p id="status">Hunger: 5, Happiness: 5, Energy: 5</p>
+    <h2 id="petNameDisplay" style="display:none;"></h2>
+    <p id="status"></p>
+
     <button onclick="pet.eat()">Eat</button>
     <button onclick="pet.play()">Play</button>
     <button onclick="pet.sleep()">Sleep</button>
 
-
-    
     <script src="virtual-pet.js"></script>
 </body>
 </html>

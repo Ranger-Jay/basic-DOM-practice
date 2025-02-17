@@ -16,6 +16,7 @@ h2 {
 
 p {
     color: green;
+    font-weight: bolder;
 }
 
 button:hover {
