@@ -1,15 +1,13 @@
 function getUniqueStats() {
-    let numbers = [...Array(11).keys()]; // Array of numbers 0-10, which are actuallly empty at this point. (same as loop and numbers.push)
-    console.log(numbers);
-    numbers.sort(() => Math.random() - 0.5); // Shuffles in the numbers into the array.
-    console.log(numbers);
-    return numbers.slice(0, 3); // Gets the first three unique numbers from the array, and returns, so it's random.
+    let numbers = [...Array(11).keys()]; // Array of numbers 0-10
+    numbers.sort(() => Math.random() - 0.5); // Shuffle array
+    return numbers.slice(0, 3); // Get first three unique numbers
 }
 
 let [hungerStart, happinessStart, energyStart] = getUniqueStats();
 
 let pet = {
-    name: "Fluffy",
+    name: document.getElementById("petName") ? document.getElementById("petName").value : "", // Ensure name is set correctly
     hunger: hungerStart, // 10 is best (full), 0 is worst (starving)
     happiness: happinessStart, // 10 is best (happy), 0 is worst (sad)
     energy: energyStart, // 10 is best (rested), 0 is worst (exhausted)
@@ -50,9 +48,23 @@ let pet = {
 
     updateStatus: function() {
         document.getElementById("status").textContent = 
-            "Hunger: " + this.hunger + " (10=Full), Happiness: " + this.happiness + " (10=Happy), Energy: " + this.energy + " (10=Rested)";
+            this.name + " - Hunger: " + this.hunger + " (10=Full), Happiness: " + this.happiness + " (10=Happy), Energy: " + this.energy + " (10=Rested)";
     }
 };
 
+function setPetName() {
+    let input = document.getElementById("petName").value;
+    if (input.trim() !== "") {
+        pet.name = input;
+        document.getElementById("nameInput").style.display = "none";
+        let nameDisplay = document.getElementById("petNameDisplay");
+        nameDisplay.textContent = pet.name;
+        nameDisplay.style.display = "block";
+        pet.updateStatus(); // Update status to reflect new name
+    }
+}
+
 // Initialize the status on page load
-pet.updateStatus();
+document.addEventListener("DOMContentLoaded", function() {
+    pet.updateStatus();
+});
