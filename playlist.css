@@ -1,0 +1,22 @@
+h1 {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+
+li {
+    color: green;
+    font-weight: bold;
+}
+
+::marker {
+    color:aquamarine;
+    font-size: 1.5em;
+    content: "😜 ";
+}
+
+.redtext {
+    color: red;
+}
