@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onload-test</title>
+    <link rel="stylesheet" href="onload-test.css">
+</head>
+<body>
+    <h1>This is an H1 for content</h1>
+    <p>This is a paragraph for content.</p>    
+    <p id="test">This is a test div.</p>     <!-- working correctly -->
+
+    
+    <script>
+        function init() {
+            var test = document.getElementById("test"); //make sure to spell methods correctly... derp.
+            test.innerHTML = "This is is a test P now, and working as intended"; 
+        }    
+        window.onload = init;
+    </script>
+
+    <script src="onload-test.js"></script>
+    
+</body>
+</html>
