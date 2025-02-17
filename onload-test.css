@@ -2,6 +2,11 @@ h1 {
     color: red;
 }
 
-p {
+/* p {
     color: blue;
+} */
+
+#content {
+    background-color: black;
+    color: green;
 }
