@@ -10,8 +10,9 @@
     <h1>This is an H1 for content</h1>
     <p>This is a paragraph for content.</p>    
     <p id="test">This is a test p.</p> <!-- working correctly -->
-    
+
      <div id="content">
+        <p>This div used to be empty</p>
 
      </div>    
 
@@ -19,7 +20,7 @@
     <script>
         function init() {
             var test = document.getElementById("test"); //make sure to spell methods correctly... derp.
-            test.innerHTML = "This is is a test P now, and working as intended"; 
+            test.innerHTML = "This is the test P now, and working as intended from within html"; 
         }    
         window.onload = init;
     </script>
