@@ -109,3 +109,33 @@ if (99 == "99") { //this is where the magic happens. ==, or ===
 } else {
     console.log("A number does NOT equal a string!");
     }
+
+console.log("<----SPACER---->");
+let j1 = 100;
+let j2 = "100";
+if (j2 === 100) { //change can go here for type coersion. either ==, or ===
+    console.log("j2 = " + j2);
+    console.log("two equal sign results", typeof j1, typeof j2);
+} else {
+    console.log("3 equal sign results", "j2 is not equal to 100");
+}
+
+console.log("<----SPACER---->");
+let k2 = 0;
+let k3 = "";
+
+if (k2 == k3) {
+    console.log(k2,k3,"k2 is equal to k3");
+} else {
+    console.log(k2,k3,"k2 is not equal to k3");
+}
+
+console.log("<----SPACER---->");
+let m1 = null;
+let m2 = undefined;
+
+if (m1 == m2) { // (will be false, if it is triple =)
+    console.log("m1 is equal to m2");
+} else {
+    console.log("m1 is not equal to m2");
+}
